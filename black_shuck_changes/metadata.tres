@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://mods/black_shuck_changes/mod.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "black_schuck_changes"
+name = "Black Schuck changes"
+version_code = 0
+version_string = "0.0.1"
+author = "ExcaliburZero"
+save_file_format_tag = ""
+save_file_format_tag_version = 0
+network_protocol_tag = ""
+modified_files = [ "res://global/PassiveQuestSystem.gd" ]
+modified_dirs = [  ]
