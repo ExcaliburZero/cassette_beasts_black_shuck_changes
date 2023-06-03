@@ -1,4 +1,4 @@
-# Black Shuck changes
+# Black Shuck Changes
 Mod for the game Cassette Beasts that makes some changes to the Black Shuck encounter.
 
 * Adds a map icon for Black Shuck's location
