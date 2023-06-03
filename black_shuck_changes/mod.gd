@@ -31,7 +31,7 @@ func set_black_shuck_quest_weight(weight: float):
 	var black_shuck2 = load("res://data/passive_quests/black_shuck.tres")
 	mod_print("Double checking black shuck quest weight: %s" % black_shuck2.weight)
 
-	mod_print("Checking weights in passive quest system.");
+	mod_print("Checking weights in passive quest system.")
 	var quest_metas = Datatables.load("res://data/passive_quests").table.values()
 	quest_metas = PassiveQuestSystem.quest_metas
 	for quest in quest_metas:
