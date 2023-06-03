@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource( 1 )
-id = "black_schuck_changes"
-name = "Black Schuck changes"
+id = "black_shuck_changes"
+name = "Black Shuck changes"
 version_code = 0
 version_string = "0.0.1"
 author = "ExcaliburZero"

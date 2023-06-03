@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/black_schuck.png-56b2019e0acea909e02f4d3fd8498e16.stex"
+path="res://.import/black_shuck.png-dbc0f1f3552a03d32a4a0ea12f5051f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods/black_shuck_changes/black_schuck.png"
-dest_files=[ "res://.import/black_schuck.png-56b2019e0acea909e02f4d3fd8498e16.stex" ]
+source_file="res://mods/black_shuck_changes/black_shuck.png"
+dest_files=[ "res://.import/black_shuck.png-dbc0f1f3552a03d32a4a0ea12f5051f4.stex" ]
 
 [params]
 
