@@ -1,6 +1,6 @@
 extends ContentInfo
 
-var black_shuck_quest_weight: float = 9999.0
+var black_shuck_quest_weight: float = 1.0 # Double the default weight of 0.5
 var black_shuck_quest_map_icon: bool = true
 
 func init_content():
