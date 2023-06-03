@@ -2,6 +2,7 @@ extends ContentInfo
 
 var black_shuck_quest_weight: float = 1.0 # Double the default weight of 0.5
 var black_shuck_quest_map_icon: bool = true
+var black_shuck_chase_chance: float = 0.1 # 10%, ten times the default chance of 1%
 
 func init_content():
 	var modutils: ContentInfo = DLC.mods_by_id["cat_modutils"]
@@ -16,6 +17,13 @@ func init_content():
 		"res://data/passive_quests/BlackShuckQuest.tscn",
 		self,
 		"_on_BlackShuckQuest_ready"
+	)
+
+	# Setup a callback to change Black Shuck's chase rate
+	DLC.mods_by_id.cat_modutils.callbacks.connect_scene_ready(
+		"res://world/quest_scenes/passive/BlackShuck.tscn",
+		self,
+		"_on_BlackShuck_ready"
 	)
 
 	mod_print("Finished loading Black Shuck changes mod.")
@@ -55,6 +63,17 @@ func _on_BlackShuckQuest_ready(scene: Node) -> void:
 		]
 
 		mod_print("%s" % black_shuck_quest.map_marker_icons)
+
+func _on_BlackShuck_ready(scene: Node) -> void:
+	mod_print("Black Shuck has spawned.")
+
+	var black_shuck = scene;
+	mod_print("black_shuck: %s" % black_shuck)
+	mod_print("previous chase chance: %s" % black_shuck.chase_chance)
+
+	# Change the chase rate
+	black_shuck.chase_chance = black_shuck_chase_chance
+	mod_print("new chase chance: %s" % black_shuck.chase_chance)
 
 func mod_print(string: String):
 	Console.writeLine("black_shuck_changes > %s" % string)
