@@ -1,8 +1,30 @@
 extends ContentInfo
 
-var black_shuck_quest_weight: float = 1.0 # Double the default weight of 0.5
+var black_shuck_quest_weight: float = 1.0 setget _set_black_shuck_quest_weight # Double the default weight of 0.5
 var black_shuck_quest_map_icon: bool = true
 var black_shuck_chase_chance: float = 0.1 # 10%, ten times the default chance of 1%
+
+const MODUTILS: Dictionary = {
+	"settings": [
+		{
+			"property": "black_shuck_quest_weight",
+			"type": "options",
+			"label": "Black Shuck spawn frequency",
+			"values": [
+				0.0,
+				0.5,
+				1.0,
+				99999.0,
+			],
+			"value_labels": [
+				"Never",
+				"Default",
+				"Double",
+				"All the time!"
+			]
+		},
+	]
+}
 
 func init_content():
 	var modutils: ContentInfo = DLC.mods_by_id["cat_modutils"]
@@ -27,6 +49,10 @@ func init_content():
 	)
 
 	mod_print("Finished loading Black Shuck changes mod.")
+
+func _set_black_shuck_quest_weight(weight: float):
+	black_shuck_quest_weight = weight
+	set_black_shuck_quest_weight(black_shuck_quest_weight)
 
 func set_black_shuck_quest_weight(weight: float):
 	var black_shuck = load("res://data/passive_quests/black_shuck.tres")
