@@ -6,8 +6,8 @@
 script = ExtResource( 1 )
 id = "black_shuck_changes"
 name = "Black Shuck Changes"
-version_code = 0
-version_string = "1.0.0"
+version_code = 1
+version_string = "1.1.0"
 author = "ExcaliburZero"
 save_file_format_tag = ""
 save_file_format_tag_version = 0
