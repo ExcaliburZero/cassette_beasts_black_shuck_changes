@@ -39,6 +39,23 @@ const MODUTILS: Dictionary = {
 				"Yes",
 			]
 		},
+		{
+			"property": "black_shuck_chase_chance",
+			"type": "options",
+			"label": "Black Shuck chase chance",
+			"values": [
+				0.0,
+				0.01,
+				0.1,
+				1.0,
+			],
+			"value_labels": [
+				"Never",
+				"1% (default)",
+				"10% (increased)",
+				"Always"
+			]
+		},
 	]
 }
 
